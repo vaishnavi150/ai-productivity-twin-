@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+.pytest_cache/
+.mypy_cache/
+mlruns/
+
+# Node
+node_modules/
+dist/
+.parcel-cache/
+
+# Environment
+.env
+*.env.local
+
+# ML models (store in S3)
+ml/models/*.pkl
+backend/app/ml/models/*.pkl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker/postgres_data/
