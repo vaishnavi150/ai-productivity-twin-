@@ -8,9 +8,8 @@ import time
 
 
 origins = [
-    "https://productivity-twin-frontend.onrender.com",
-    "http://localhost:5173",
-    "*"
+    "https://productivity-twin-frontend.onrender.com/",
+    "http://localhost:5173"
 ]
 
 from app.config import settings
@@ -51,7 +50,7 @@ app.add_middleware(
     # allow_origins=settings.cors_origins_list,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET","POST","PUT","DELETE","OPTIONS"],
     allow_headers=["*"],
 )
 app.add_middleware(GZipMiddleware, minimum_size=1000)
