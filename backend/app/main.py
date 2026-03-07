@@ -6,7 +6,15 @@ from contextlib import asynccontextmanager
 import logging
 import time
 
+
+origins = [
+    "https://productivity-twin-frontend.onrender.com",
+    "http://localhost:5173",
+    "*"
+]
+
 from app.config import settings
+
 from app.database import create_tables
 from app.routers import auth, logs, dashboard, insights
 
@@ -40,7 +48,8 @@ app = FastAPI(
 # ─── Middleware ────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins_list,
+    # allow_origins=settings.cors_origins_list,
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
