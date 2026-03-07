@@ -8,7 +8,7 @@ import time
 
 
 origins = [
-    "https://productivity-twin-frontend.onrender.com/",
+    "https://productivity-twin-frontend.onrender.com",
     "http://localhost:5173"
 ]
 
